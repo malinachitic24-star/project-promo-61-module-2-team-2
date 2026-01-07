@@ -1,0 +1,219 @@
+@use "../core/variables" as vars;
+.main {
+  margin-bottom: 8rem;
+  margin-top: 1rem;
+  .hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+      text-align: center;
+      margin-left: 1rem;
+      margin-right: 1rem;
+      font-family: vars.$font-title;
+      font-weight: vars.$font-weight-title;
+      letter-spacing: 0.02em;
+      font-size: 2.2rem;
+    }
+    &__text {
+      margin-top: 1.5rem;
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+      text-align: center;
+      font-size: 1.3rem;
+    }
+  }
+  .card-container {
+    margin-top: 2rem;
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+
+    .card {
+      display: flex;
+      flex-direction: column;
+      gap: clamp(1rem, 4vw, 2rem);
+      padding-top: clamp(2rem, 20%, 6rem);
+      padding-bottom: clamp(2rem, 20%, 6rem);
+      width: 100%;
+      min-width: 17rem;
+      max-width: 23rem;
+      height: auto;
+      border-bottom-left-radius: 12px;
+      border-bottom-right-radius: 12px;
+      border-top-left-radius: 12px;
+      border-top-right-radius: 12px;
+      box-shadow: vars.$shadow;
+      background-color: vars.$color-background;
+      &__icon {
+        font-size: 3rem;
+      }
+      &__title {
+        font-family: vars.$font-title;
+        font-weight: vars.$font-weight-title;
+        font-size: 2rem;
+      }
+      &__text {
+        font-size: 1.3rem;
+      }
+    }
+  }
+  .button-container {
+    margin-top: clamp(2rem, 20%, 5rem);
+    margin-bottom: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    .button-start {
+      text-decoration: none;
+      background-color: black;
+      color: white;
+      width: 80%;
+      min-width: 17rem;
+      max-width: 22rem;
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+      border-bottom-left-radius: 35px;
+      border-bottom-right-radius: 35px;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-weight: 400;
+      font-size: 1rem;
+    }
+  }
+}
+
+@media all and (min-width: 768px) {
+  .main {
+    margin-bottom: 12rem;
+    margin-top: clamp(2rem, 10vw, 4rem);
+    .hero {
+      &__title {
+        margin-left: 1.5rem;
+        margin-right: 1.5rem;
+        letter-spacing: 0.03em;
+        font-size: clamp(5rem, 4vw, 8rem);
+      }
+      &__text {
+        margin-left: 2.5rem;
+        margin-right: 2.5rem;
+        font-size: 3rem;
+      }
+    }
+    .card-container {
+      margin-top: clamp(4rem, 4vw, 6rem);
+
+      .card {
+        width: 100%;
+        min-width: 32rem;
+        max-width: 32rem;
+
+        &__icon {
+          font-size: clamp(6rem, 5vw, 8rem);
+        }
+        &__title {
+          font-family: vars.$font-title;
+          font-weight: vars.$font-weight-title;
+          font-size: clamp(4rem, 4vw, 6rem);
+        }
+        &__text {
+          font-size: clamp(2.5rem, 4vw, 3rem);
+        }
+      }
+    }
+    .button-container {
+      .button-start {
+        max-width: 32rem;
+        padding-top: 2rem;
+        padding-bottom: 2rem;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        letter-spacing: 0.3em;
+        font-weight: 600;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .main {
+    .hero {
+      &__title {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        letter-spacing: 0.03em;
+        font-size: clamp(6rem, 5vw, 8rem);
+        line-height: 7rem;
+      }
+      &__text {
+        margin-top: 3rem;
+        margin-left: 4.5rem;
+        margin-right: 4.5rem;
+        font-size: clamp(2.5rem, 3vw, 4rem);
+        letter-spacing: 0.05rem;
+        line-height: 4rem;
+      }
+    }
+    .card-container {
+      margin-top: clamp(8rem, 4vw, 9rem);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin-left: 3.5rem;
+      margin-right: 3rem;
+
+      .card {
+        max-width: clamp(29rem, 4vw, 42rem);
+        min-width: 22rem;
+        min-height: 28rem;
+        gap: 1rem;
+        padding-top: clamp(1rem, 5vw, 3rem);
+        padding-bottom: clamp(1rem, 5vw, 3rem);
+
+        &__icon {
+          font-size: clamp(7rem, 5vw, 10rem);
+        }
+        &__title {
+          font-family: vars.$font-title;
+          font-weight: vars.$font-weight-title;
+          font-size: clamp(4rem, 4vw, 6rem);
+        }
+        &__text {
+          font-size: clamp(1.8rem, 4vw, 2rem);
+          margin-left: 2rem;
+          margin-right: 2rem;
+        }
+      }
+    }
+    .button-container {
+      .button-start {
+        max-width: 32rem;
+        padding-top: 2rem;
+        margin-top: clamp(2rem, 4vw, 4rem);
+        padding-bottom: 2rem;
+        border-bottom-left-radius: 50px;
+        border-bottom-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border-top-right-radius: 50px;
+        letter-spacing: 0.3em;
+        font-weight: 600;
+        font-size: 2rem;
+        transition: transform 0.2s ease;
+        &:hover {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@use "../core/variables" as vars;
+.header {
+  padding-top: clamp(2.3rem, 10vw, 5rem);
+  padding-bottom: 2rem;
+  width: 100vw;
+  min-height: 10vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.105);
+  &__logo {
+    width: 300px;
+    height: auto;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .header {
+    padding-top: clamp(4rem, 15%, 7rem);
+    padding-bottom: 4rem;
+
+    &__logo {
+      width: clamp(300px, 50vw, 600px);
+      height: auto;
+    }
+  }
+}
+
+@media all and (min-width: 1280px) {
+  .header {
+    padding-top: clamp(7rem, 15%, 8rem);
+    padding-bottom: 5rem;
+
+    &__logo {
+      width: clamp(500px, 50vw, 700px);
+      height: auto;
+    }
+  }
+}

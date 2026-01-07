@@ -1,0 +1,13 @@
+@use "../core/variables" as vars;
+
+body {
+  height: 100vh;
+  background-color: vars.$color-background;
+  color: vars.$color-font;
+  font-family: vars.$font-general;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
