@@ -1,3 +1,21 @@
 'use strict';
+const buttonDesign = document.querySelector('.menu__button-design');
+const buttonForm = document.querySelector('.menu__button-form');
+const buttonShare = document.querySelector('.menu__button-share');
 
-console.log('>> Ready :)');
+const menuDropdownDesign = document.querySelector('.menu__dropdown-design');
+const menuDropdownForm = document.querySelector('.menu__dropdown-form');
+const menuDropdownShare = document.querySelector('.menu__dropdown-share');
+
+
+buttonDesign.addEventListener('click', ()=>{
+    menuDropdownDesign.classList.toggle('open')
+})
+
+buttonForm.addEventListener('click', ()=>{
+    menuDropdownForm.classList.toggle('open')
+})
+
+buttonShare.addEventListener('click', ()=>{
+    menuDropdownShare.classList.toggle('open')
+})
