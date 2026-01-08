@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../scss/avatar.css">
+    <title>Document</title>
+</head>
+<body>
+
+      <form class="form">
+
+    <!-- FOTO (COMPONENTE) -->
+    <section class="form__section">
+      <label class="form__btn">
+        Añadir foto
+        <input type="file" class="js__profile-upload-btn" />
+      </label>
+
+      <div class="js__profile-image"></div>
+      <div class="js__profile-preview"></div>
+    </section>
+
+    <!-- CAMPO NUMÉRICO OBLIGATORIO -->
+    <section class="form__section">
+      <label>
+        Número
+        <input type="number" name="field1" required min="1" />
+      </label>
+    </section>
+
+    <!-- OTROS CAMPOS -->
+    <section class="form__section">
+      <label>
+        Nombre
+        <input type="text" name="field2" />
+      </label>
+
+      <label>
+        Descripción
+        <input type="text" name="field3" />
+      </label>
+    </section>
+
+    <button type="submit">Generar tarjeta</button>
+  </form>
+
+  <!-- ===================== -->
+  <!-- PREVISUALIZACIÓN -->
+  <!-- ===================== -->
+
+  <section class="card">
+
+    <img class="card__photo" alt="Foto de la tarjeta" />
+
+    <p class="card__number"></p>
+    <h2 class="card__title"></h2>
+    <p class="card__text"></p>
+
+  </section>
+
+<!-- AQUÍ -->
+<script src="../js/get-avatar.js"></script>
+<script src="../js/comparte.js"></script>
+</body>
+</html>
