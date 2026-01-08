@@ -1,0 +1,38 @@
+.card {
+    background-image: url(/Classic.png);
+    width: 32rem;
+    height: 22rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+}
+.menu__dropdown-design{
+    height: 0;
+
+}
+.menu__dropdown-design.open{
+    height: 22rem;
+    background-color: blanchedalmond;
+    width: 5rem;
+}
+
+.menu__dropdown-form{
+    height: 0;
+}
+
+.menu__dropdown-form.open{
+    height: 22rem;
+    background-color: rgb(21, 64, 193);
+    width: 5rem;
+}
+
+.menu__dropdown-share{
+    display: none;
+    background-color: rgb(199, 127, 18);
+    width: 5rem;
+}
+
+.menu__dropdown-share.open{
+    display: block;
+    background-color: rgb(199, 127, 18);
+}
