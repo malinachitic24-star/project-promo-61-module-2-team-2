@@ -14,7 +14,7 @@
 .menu__dropdown-design.open{
     height: 22rem;
     background-color: blanchedalmond;
-    width: 55rem;
+    width: 20rem;
 }
 
 .menu__dropdown-form{
@@ -24,17 +24,16 @@
 
 .menu__dropdown-form.open{
     height: 22rem;
-    background-color: rgb(21, 64, 193);
-    width: 5rem;
+    background-color: blanchedalmond;
+    width: 20rem;
 }
 
 .menu__dropdown-share{
     display: none;
-    background-color: rgb(199, 127, 18);
-    width: 5rem;
 }
 
 .menu__dropdown-share.open{
     display: block;
-    background-color: rgb(199, 127, 18);
+    width: 20rem;
+    background-color: blanchedalmond;
 }
