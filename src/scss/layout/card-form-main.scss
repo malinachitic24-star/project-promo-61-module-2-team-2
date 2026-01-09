@@ -1,23 +1,25 @@
-.card {
-    background-image: url(/Classic.png);
+.card-preview {
+    background-image: url(/images/Classic.png);
     width: 32rem;
     height: 22rem;
     background-size: contain;
     background-repeat: no-repeat;
-
 }
+
 .menu__dropdown-design{
     height: 0;
+    overflow: hidden;
 
 }
 .menu__dropdown-design.open{
     height: 22rem;
     background-color: blanchedalmond;
-    width: 5rem;
+    width: 55rem;
 }
 
 .menu__dropdown-form{
     height: 0;
+    overflow: hidden;
 }
 
 .menu__dropdown-form.open{
