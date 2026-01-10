@@ -31,10 +31,10 @@ function writeImage() {
      * podemos pasarlo como background a la imagen de perfil y a la vista previa
      * de nuestro componente.
      */
-      profileImage.style.backgroundImage = `url(${fr.result})`;
-      profilePreview.style.backgroundImage = `url(${fr.result})`;
-      previewPhoto.src = fr.result;
-      cardData.photo = fr.result;
+      // profileImage.style.backgroundImage = `url(${fr.result})`;
+      profilePreview.style.backgroundImage = `url(${fr.result})`; //minipreview
+      previewPhoto.src = fr.result; //preview grande
+      cardData.photo = fr.result; //guardar foto en objeto
 
 
     /* Si en lugar de establecer la imagen como fondo de un elemento, 
