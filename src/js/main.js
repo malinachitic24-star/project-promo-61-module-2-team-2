@@ -19,3 +19,4 @@ buttonForm.addEventListener('click', ()=>{
 buttonShare.addEventListener('click', ()=>{
     menuDropdownShare.classList.toggle('open')
 })
+

@@ -1,39 +1,102 @@
-.card-preview {
-    background-image: url(/images/Classic.png);
-    width: 32rem;
-    height: 22rem;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
+.card-form-main {
+  margin-left: 1rem;
+  margin-right: 1rem;
+  display: flex;
+  flex-direction: column;
 
-.menu__dropdown-design{
-    height: 0;
-    overflow: hidden;
+  .menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 32rem;
 
-}
-.menu__dropdown-design.open{
-    height: 22rem;
-    background-color: blanchedalmond;
-    width: 20rem;
-}
+    &__dropdown-design {
+      display: none;
+    }
 
-.menu__dropdown-form{
-    height: 0;
-    overflow: hidden;
-}
+    &__dropdown-design.open {
+      display: block;
+      background-color: blanchedalmond;
+    }
 
-.menu__dropdown-form.open{
-    height: 22rem;
-    background-color: blanchedalmond;
-    width: 20rem;
-}
+    &__dropdown-form {
+      display: none;
+    }
 
-.menu__dropdown-share{
-    display: none;
-}
+    &__dropdown-form.open {
+      display: block;
+      background-color: blanchedalmond;
+    }
 
-.menu__dropdown-share.open{
-    display: block;
-    width: 20rem;
-    background-color: blanchedalmond;
+    &__dropdown-share {
+      display: none;
+    }
+
+    &__dropdown-share.open {
+      display: block;
+      background-color: blanchedalmond;
+    }
+  }
+
+  .preview {
+    display: flex;
+    flex-direction: column;
+
+    .card-preview {
+      background-image: url(/images/Cute.png);
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: flex;
+      width: 100%;
+      max-width: 55rem;
+      aspect-ratio: 17/10;
+
+      &__left {
+        flex:4;
+        .card-preview__image {
+          background-image: url(/images/logo-nimalog-card.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          aspect-ratio: 2/1;
+          margin-top: 2.5rem;
+        }
+        .card-preview__slogan {
+          color: black;
+          margin-left: clamp(11px, 2vw, 15px);
+          font-size: clamp(9px, 2vw, 15px);
+          text-transform: uppercase;
+        }
+      }
+
+      &__right {
+        flex:6;
+        .card-preview__title {
+          color: red;
+        }
+        .card-preview__subtitle {
+          color: red;
+        }
+        .card-preview__contact {
+          color: red;
+          &-element {
+            color: red;
+            list-style: none;
+          }
+
+          &-icon {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+
+  .button-reset {
+    background-color: antiquewhite;
+    width: 5rem;
+  }
+
+  .button-home {
+    background-color: aqua;
+  }
 }
