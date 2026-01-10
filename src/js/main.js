@@ -20,3 +20,10 @@ buttonShare.addEventListener('click', ()=>{
     menuDropdownShare.classList.toggle('open')
 })
 
+//Formulario Rellena
+const companyName=document.querySelector('.companyname')
+const parrafoName=document.querySelector('.card-preview__title.js-name')
+
+companyName.addEventListener('input', function(){
+    parrafoName.textContent=companyName.value || 'Nimalog';
+});
