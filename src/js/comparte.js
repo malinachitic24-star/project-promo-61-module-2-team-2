@@ -18,6 +18,32 @@ const previewTitle = document.querySelector('.card__title');
 const previewText = document.querySelector('.card__text');
 const photoInput = document.querySelector('.js__profile-upload-btn');
 const previewPhoto = document.querySelector('.card__photo');
+const resetBtn = document.querySelector('.reset-btn');
+
+//RESET
+resetBtn.addEventListener('click', function() {
+  localStorage.removeItem('cards');
+  location.reload();
+});
+
+//CARGAR TARJETA DEL LOCALSTORAGE O CREAR ARRAY SI NO HAY
+let storedCards = JSON.parse(localStorage.getItem('cards')) || [];
+if (storedCards.length > 0) {
+const lastCard = storedCards[storedCards.length - 1];
+cardData.field1 = lastCard.field1;
+cardData.field2 = lastCard.field2;
+cardData.field3 = lastCard.field3;
+cardData.field4 = lastCard.field4;
+cardData.field5 = lastCard.field5;
+cardData.photo = lastCard.photo;
+
+updatePreview();
+
+if (cardData.photo) {
+  previewPhoto.src = cardData.photo;
+}
+
+}
 
 // ACTUALIZAR OBJETO
 form.addEventListener('input', function(ev) {
@@ -60,6 +86,11 @@ function updatePreview() {
 form.addEventListener('submit', function(ev) {
   ev.preventDefault();
   // console.log('submit funciona');
+
+  //Guardar tarjeta en array
+  storedCards.push(cardData);
+  localStorage.setItem('cards', JSON.stringify(storedCards))
+  
 
   //POST
   fetch('https://dev.adalab.es/api/info/data', {
