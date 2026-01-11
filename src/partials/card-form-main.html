@@ -2,7 +2,70 @@
   <nav class="menu">
     <button class="menu__button-design">Diseña</button>
     <div class="menu__dropdown-design">
-      <p>Probando</p>
+      <form class="design">
+        <fieldset class="design__palette">
+          <label class="palette">
+            <input class="js-palette" type="radio" name="palette" value="classic" checked/>
+            Classic
+            <div class="palette__colors palette__colors--classic">
+              <span class="palette__color palette__color--one"></span>
+              <span class="palette__color palette__color--two"></span>
+              <span class="palette__color palette__color--three"></span>
+              <span class="palette__color palette__color--four"></span>
+            </div>
+          </label>
+          <label class="palette">
+            <input class="js-palette" type="radio" name="palette" value="classic-reverse"/>
+            Classic-reverse
+            <div class="palette__colors palette__colors--classic-reverse">
+              <span class="palette__color palette__color--one"></span>
+              <span class="palette__color palette__color--two"></span>
+              <span class="palette__color palette__color--three"></span>
+              <span class="palette__color palette__color--four"></span>
+            </div>
+          </label>
+          <label class="palette">
+            <input class="js-palette" type="radio" name="palette" value="classic-reverse"/>
+            Business
+            <div class="palette__colors palette__colors--business">
+              <span class="palette__color palette__color--one"></span>
+              <span class="palette__color palette__color--two"></span>
+              <span class="palette__color palette__color--three"></span>
+              <span class="palette__color palette__color--four"></span>
+            </div>
+          </label>
+          <label class="palette">
+            <input class="js-palette" type="radio" name="palette" value="classic-reverse"/>
+            Retro
+            <div class="palette__colors palette__colors--retro">
+              <span class="palette__color palette__color--one"></span>
+              <span class="palette__color palette__color--two"></span>
+              <span class="palette__color palette__color--three"></span>
+              <span class="palette__color palette__color--four"></span>
+            </div>
+          </label>
+          <label class="palette">
+            <input class="js-palette" type="radio" name="palette" value="classic-reverse"/>
+            Delicate
+            <div class="palette__colors palette__colors--delicate">
+              <span class="palette__color palette__color--one"></span>
+              <span class="palette__color palette__color--two"></span>
+              <span class="palette__color palette__color--three"></span>
+              <span class="palette__color palette__color--four"></span>
+            </div>
+          </label>
+          <label class="palette">
+            <input class="js-palette" type="radio" name="palette" value="classic-reverse"/>
+            Cute
+            <div class="palette__colors palette__colors--cute">
+              <span class="palette__color palette__color--one"></span>
+              <span class="palette__color palette__color--two"></span>
+              <span class="palette__color palette__color--three"></span>
+              <span class="palette__color palette__color--four"></span>
+            </div>
+          </label>
+        </fieldset>
+      </form>
     </div>
     <button class="menu__button-form">Rellena</button>
     <div class="menu__dropdown-form">
@@ -14,7 +77,7 @@
     </div>
   </nav>
   <section class="preview">
-    <div class="card-preview">
+    <div class="card-preview card-preview--classic">
       <div class="card-preview__left">
         <div class="card-preview__image js-image"></div>
         <div class="card-preview__slogan js-slogan">

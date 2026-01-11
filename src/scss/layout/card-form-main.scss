@@ -16,7 +16,62 @@
 
     &__dropdown-design.open {
       display: block;
-      background-color: blanchedalmond;
+
+    }
+
+    .design {
+      .design__palette {
+        .palette {
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+
+      &__colors {
+        display: flex;
+        border: 3px solid rgb(171, 169, 169);
+        gap: 3px;
+        background-color: rgb(171, 169, 169);
+        border-radius: 5%;
+
+        &--classic .palette__color--one {background-color: #EDEDED;}
+        &--classic .palette__color--two {background-color: #000000;}
+        &--classic .palette__color--three {background-color: #000000;;}
+        &--classic .palette__color--four {background-color: #EDEDED;}
+
+        &--classic-reverse .palette__color--one {background-color:#000000;}
+        &--classic-reverse .palette__color--two {background-color: #EDEDED;}
+        &s--classic-reverse .palette__color--three {background-color: #000000;}
+        &--classic-reverse .palette__color--four {background-color: #000000;}
+
+        &--business .palette__color--one {background-color:#C6C6C6;}
+        &--business .palette__color--two {background-color: #5F5B58;}
+        &--business .palette__color--three {background-color: #1D2B36;}
+        &--business .palette__color--four {background-color: #000000;}
+
+        &--retro .palette__color--one {background-color: #EDEDED;}
+        &--retro .palette__color--two {background-color: #016296;}
+        &--retro .palette__color--three {background-color: #0175A4;}
+        &--retro .palette__color--four {background-color: #000000;}
+
+        &--delicate .palette__color--one {background-color:#F9D6CF;}
+        &--delicate .palette__color--two {background-color: #F48DA2 ;}
+        &--delicate .palette__color--three {background-color: #DEA5CE ;}
+        &--delicate .palette__color--four {background-color: #000000;}
+
+        &--cute .palette__color--one {background-color:#C4E5E0;}
+        &--cute .palette__color--two {background-color: #FABDBB;}
+        &--cute .palette__color--three {background-color: #F8CB82;}
+        &--cute .palette__color--four {background-color: #000000;}
+
+      }
+      
+      &__color {
+        width: 20px;
+        height: 15px;
+      }
+   
+        }
+      }
     }
 
     &__dropdown-form {
