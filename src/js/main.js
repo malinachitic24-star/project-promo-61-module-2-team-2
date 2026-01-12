@@ -23,7 +23,32 @@ buttonShare.addEventListener('click', ()=>{
 //Formulario Rellena
 const companyName=document.querySelector('.companyname')
 const parrafoName=document.querySelector('.card-preview__title.js-name')
+const companyWork=document.querySelector('.work-company')
+const parrafoWork=document.querySelector('.card-preview__subtitle.ja-business-sector')
+const companyPhone=document.querySelector('.phone-company')
+const parrafoPhone=document.querySelector('.js-phone')
+const companyEmail=document.querySelector('.email-company')
+const parrafoEmail=document.querySelector('.js-email')
+const companyWeb=document.querySelector('.web-company')
+const parrafoWeb=document.querySelector('.js-web')
 
 companyName.addEventListener('input', function(){
     parrafoName.textContent=companyName.value || 'Nimalog';
 });
+
+companyWork.addEventListener('input', function(){
+    parrafoWork.textContent=companyWork.value || 'Marketing';
+});
+
+companyPhone.addEventListener('input', function(){
+    parrafoPhone.textContent=companyPhone.value || '911-234-567';
+});
+
+companyEmail.addEventListener('input', function(){
+    parrafoEmail.textContent=companyEmail.value || 'nimalog@gmail.com';
+});
+
+companyWeb.addEventListener('input', function(){
+    parrafoWeb.textContent=companyWeb.value || 'www.nimalog.com';
+});
+
