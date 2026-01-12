@@ -28,6 +28,7 @@ resetBtn.addEventListener('click', function() {
 
 //CARGAR TARJETA DEL LOCALSTORAGE O CREAR ARRAY SI NO HAY
 let storedCards = JSON.parse(localStorage.getItem('cards')) || [];
+
 if (storedCards.length > 0) {
 const lastCard = storedCards[storedCards.length - 1];
 cardData.field1 = lastCard.field1;
@@ -85,10 +86,10 @@ function updatePreview() {
 //FORMULARIO
 form.addEventListener('submit', function(ev) {
   ev.preventDefault();
-  // console.log('submit funciona');
+
 
   //Guardar tarjeta en array
-  storedCards.push(cardData);
+  storedCards.push({ ...cardData });
   localStorage.setItem('cards', JSON.stringify(storedCards))
   
 
@@ -115,7 +116,7 @@ form.addEventListener('submit', function(ev) {
       //Abrimos en una nueva página
       window.open(`card.html?id=${uuid}`, '_blank');
     } else {
-      console.log("Error en la creación de la tarjeta:", data.error);
+      console.log("Error en la creación de la tarjeta:", data.error); //Cambiar los console.log por mensajes que vea el usuario
     }
   })
 
