@@ -68,11 +68,10 @@ if (savedPalette) {
 }
 
 //1.c) Reset 
-/*
 const resetButton = document.querySelector('.button-reset');
 
 resetButton.addEventListener('click', () => {
   localStorage.removeItem ('palette');
   location.reload();
-}); */
+}); 
 
