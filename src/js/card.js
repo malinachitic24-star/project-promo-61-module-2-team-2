@@ -67,6 +67,8 @@ const id = urlParams.get('id');
     window.open(whatsappURL, '_blank');
   })
 
+  const savedCards = JSON.parse(localStorage.getItem('cards')) || [];
+
 
 // const storedCards = JSON.parse(localStorage.getItem('cards')) || [];
 // if (storedCards.length > 0 && container) {
