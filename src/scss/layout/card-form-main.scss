@@ -4,433 +4,444 @@
   margin-right: 1rem;
   display: flex;
   flex-direction: column;
-  
-    .menu {
+
+  .menu {
+    display: flex;
+    flex-direction: column;
+    max-width: 32rem;
+    &__button-design {
       display: flex;
-      flex-direction: column;
-      max-width: 32rem;
+      font-family: vars.$font-title;
+      width: 100%;
+      height: 60px;
 
-      &__dropdown-design {
-        display: none;
-      }
+      gap: 0.5rem;
+      font-size: 2rem;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+    &__button-form {
+      display: flex;
+      font-family: vars.$font-title;
+      width: 100%;
+      height: 60px;
+      gap: 0.5rem;
+      font-size: 2rem;
+      align-items: center;
+      justify-content: center;
+    }
+    &__button-share {
+      display: flex;
+      font-family: vars.$font-title;
+      width: 100%;
+      height: 60px;
+      gap: 0.5rem;
+      font-size: 2rem;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
 
-      &__dropdown-design.open {
-        display: block;
-      }
+    &__dropdown-design {
+      display: none;
+    }
 
-      .design {
-        .design__palette {
-          .palette {
+    &__dropdown-design.open {
+      display: block;
+    }
+
+    .design {
+      .design__palette {
+        display: flex;
+        flex-direction: column;
+        .palette {
+          margin-top: 0.5rem;
+          margin-bottom: 0.5rem;
+          display: flex;
+          gap: 0.5rem;
+          align-items: center;
+
+          &__colors {
             display: flex;
-            gap: 0.5rem;
-            align-items: center;
+            border: 3px solid rgb(171, 169, 169);
+            gap: 3px;
+            background-color: rgb(171, 169, 169);
+            border-radius: 5%;
 
-            &__colors {
-              display: flex;
-              border: 3px solid rgb(171, 169, 169);
-              gap: 3px;
-              background-color: rgb(171, 169, 169);
-              border-radius: 5%;
-
-              &--classic .palette__color--one {
-                background-color: #ededed;
-              }
-              &--classic .palette__color--two {
-                background-color: #000000;
-              }
-              &--classic .palette__color--three {
-                background-color: #000000;
-              }
-              &--classic .palette__color--four {
-                background-color: #ededed;
-              }
-
-              &--classic-reverse .palette__color--one {
-                background-color: #000000;
-              }
-              &--classic-reverse .palette__color--two {
-                background-color: #ededed;
-              }
-              &s--classic-reverse .palette__color--three {
-                background-color: #000000;
-              }
-              &--classic-reverse .palette__color--four {
-                background-color: #000000;
-              }
-
-              &--business .palette__color--one {
-                background-color: #c6c6c6;
-              }
-              &--business .palette__color--two {
-                background-color: #5f5b58;
-              }
-              &--business .palette__color--three {
-                background-color: #1d2b36;
-              }
-              &--business .palette__color--four {
-                background-color: #000000;
-              }
-
-              &--retro .palette__color--one {
-                background-color: #ededed;
-              }
-              &--retro .palette__color--two {
-                background-color: #016296;
-              }
-              &--retro .palette__color--three {
-                background-color: #0175a4;
-              }
-              &--retro .palette__color--four {
-                background-color: #000000;
-              }
-
-              &--delicate .palette__color--one {
-                background-color: #f9d6cf;
-              }
-              &--delicate .palette__color--two {
-                background-color: #f48da2;
-              }
-              &--delicate .palette__color--three {
-                background-color: #dea5ce;
-              }
-              &--delicate .palette__color--four {
-                background-color: #000000;
-              }
-
-              &--cute .palette__color--one {
-                background-color: #c4e5e0;
-              }
-              &--cute .palette__color--two {
-                background-color: #fabdbb;
-              }
-              &--cute .palette__color--three {
-                background-color: #f8cb82;
-              }
-              &--cute .palette__color--four {
-                background-color: #000000;
-              }
+            &--classic .palette__color--one {
+              background-color: #ededed;
+            }
+            &--classic .palette__color--two {
+              background-color: #000000;
+            }
+            &--classic .palette__color--three {
+              background-color: #000000;
+            }
+            &--classic .palette__color--four {
+              background-color: #ededed;
             }
 
-            &__color {
-              width: 20px;
-              height: 15px;
+            &--classic-reverse .palette__color--one {
+              background-color: #000000;
+            }
+            &--classic-reverse .palette__color--two {
+              background-color: #ededed;
+            }
+            &s--classic-reverse .palette__color--three {
+              background-color: #000000;
+            }
+            &--classic-reverse .palette__color--four {
+              background-color: #000000;
+            }
+
+            &--business .palette__color--one {
+              background-color: #c6c6c6;
+            }
+            &--business .palette__color--two {
+              background-color: #5f5b58;
+            }
+            &--business .palette__color--three {
+              background-color: #1d2b36;
+            }
+            &--business .palette__color--four {
+              background-color: #000000;
+            }
+
+            &--retro .palette__color--one {
+              background-color: #ededed;
+            }
+            &--retro .palette__color--two {
+              background-color: #016296;
+            }
+            &--retro .palette__color--three {
+              background-color: #0175a4;
+            }
+            &--retro .palette__color--four {
+              background-color: #000000;
+            }
+
+            &--delicate .palette__color--one {
+              background-color: #f9d6cf;
+            }
+            &--delicate .palette__color--two {
+              background-color: #f48da2;
+            }
+            &--delicate .palette__color--three {
+              background-color: #dea5ce;
+            }
+            &--delicate .palette__color--four {
+              background-color: #000000;
+            }
+
+            &--cute .palette__color--one {
+              background-color: #c4e5e0;
+            }
+            &--cute .palette__color--two {
+              background-color: #fabdbb;
+            }
+            &--cute .palette__color--three {
+              background-color: #f8cb82;
+            }
+            &--cute .palette__color--four {
+              background-color: #000000;
             }
           }
+
+          &__color {
+            width: 20px;
+            height: 15px;
+          }
         }
-      }
-
-      &__dropdown-form {
-        display: none;
-      }
-
-      &__dropdown-form.open {
-        display: block;
-        background-color: blanchedalmond;
-      }
-
-      &__dropdown-share {
-        display: none;
-      }
-
-      &__dropdown-share.open {
-        display: block;
-        background-color: blanchedalmond;
       }
     }
 
-    .preview {
+    &__dropdown-form {
+      display: none;
+    }
+
+    &__dropdown-form.open {
+      display: block;
+    }
+
+    &__dropdown-share {
+      display: none;
+    }
+  }
+
+  .preview {
+    display: flex;
+    flex-direction: column;
+
+    .card-preview {
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      background-image: url(/images/Classic.png);
+      background-size: cover;
+      background-repeat: no-repeat;
       display: flex;
-      flex-direction: column;
+      width: 100%;
+      max-width: 55rem;
+      aspect-ratio: 17/10;
+      font-size: clamp(0.5rem, 2.89vw, 2rem);
 
-      .card-preview {
-        background-image: url(/images/Classic.png);
-        background-size: cover;
-        background-repeat: no-repeat;
+      &__left {
+        flex: 3;
         display: flex;
-        width: 100%;
-        max-width: 55rem;
-        aspect-ratio: 17/10;
-        font-size: clamp(0.5rem, 2.89vw, 2rem);
-
-        &__left {
-          flex: 3;
-          display: flex;
-          flex-direction: column;
-
-          .card-preview__image {
-            flex: 2;
-            background-image: url(/images/logo-nimalog-card.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 80%;
-            height: 80%;
-            margin: 0 auto;
-          }
-          .card-preview__slogan {
-            flex: 1;
-            color: black;
-            margin-left: clamp(3.8vw, 3.5vw, 1vw);
-            text-transform: uppercase;
-            font-size: clamp(0.5rem, 2.89vw, 1.5rem);
-          }
-        }
-
-        &__right {
-          flex: 5;
-          margin-top: clamp(1.5rem, 5vw, 3rem);
-          color: #ededed;
-
-          .card-preview__title {
-            text-align: center;
-            text-align: center;
-            font-size: clamp(1.5rem, 5vw, 5rem);
-            font-family: "Libre Braskerville", georgia;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.09em;
-          }
-
-          .card-preview__subtitle {
-            margin-top: 0.2rem;
-            font-size: clamp(1rem, 5vw, 3.5rem);
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: 400;
-            letter-spacing: 0.2em;
-          }
-
-          .card-preview__contact {
-            margin-top: 0.6rem;
-            display: flex;
-            flex-direction: column;
-            margin-left: 1.8rem;
-            gap: 0.5rem;
-            letter-spacing: 0.15em;
-
-            &-element {
-              list-style: none;
-              display: flex;
-              align-items: center;
-              gap: 0.5rem;
-            }
-
-            &-icon {
-              font-size: 0.8rem;
-              background-color: white;
-              color: black;
-              border-radius: 50%;
-              width: 20px;
-              height: 20px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
-          }
-        }
-      }
-
-      .card-preview--classic {
-        //no puedo rellenar esta clase
-      }
-
-      .card-preview--classic-reverse {
-        background-image: url(/images/Classic-reverse.png);
+        flex-direction: column;
 
         .card-preview__image {
-          background-image: url(/images/logo-reverse.png);
+          flex: 2;
+          background-image: url(/images/logo-nimalog-card.png);
+          background-size: contain;
+          background-repeat: no-repeat;
+          background-position: center;
+          width: 80%;
+          height: 80%;
+          margin: 0 auto;
         }
         .card-preview__slogan {
-          color: white;
+          flex: 1;
+          color: black;
+          margin-left: clamp(3.8vw, 3.5vw, 1vw);
+          text-transform: uppercase;
+          font-size: clamp(0.5rem, 2.89vw, 1.5rem);
         }
+      }
+
+      &__right {
+        flex: 5;
+        margin-top: clamp(1.5rem, 5vw, 3rem);
+        color: #ededed;
+
         .card-preview__title {
-          color: #000000;
+          text-align: center;
+          text-align: center;
+          font-size: clamp(1.5rem, 5vw, 5rem);
+          font-family: "Libre Braskerville", georgia;
+          font-weight: 400;
+          text-transform: uppercase;
+          letter-spacing: 0.09em;
         }
+
         .card-preview__subtitle {
-          color: black;
+          margin-top: 0.2rem;
+          font-size: clamp(1rem, 5vw, 3.5rem);
+          text-align: center;
+          text-transform: uppercase;
+          font-weight: 400;
+          letter-spacing: 0.2em;
         }
 
-        .card-preview__contact-element {
-          color: black;
-        }
-
-        .card-preview__contact-icon {
-          background-color: black;
-          color: white;
-          width: 23px;
-          height: 23px;
-        }
-      }
-
-      .card-preview--business {
-        background-image: url(/images/Business.png);
-      }
-
-      .card-preview--retro {
-        background-image: url(/images/Retro.png);
-      }
-      .card-preview--delicate {
-        background-image: url(/images/Delicate.png);
-
-        &__left {
-          flex: 3;
+        .card-preview__contact {
+          margin-top: 0.6rem;
           display: flex;
           flex-direction: column;
+          margin-left: 1.8rem;
+          gap: 0.5rem;
+          letter-spacing: 0.15em;
 
-          .card-preview__image {
-            flex: 2;
-            background-image: url(/images/logo-nimalog-card.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 80%;
-            height: 80%;
-            margin: 0 auto;
-          }
-          .card-preview__slogan {
-            flex: 1;
-            color: black;
-            margin-left: 4vw;
-            text-transform: uppercase;
-          }
-        }
-
-        &__right {
-          flex: 5;
-          margin-top: clamp(1.5rem, 5vw, 3rem);
-          color: #ededed;
-
-          .card-preview__title {
-            text-align: center;
-            text-align: center;
-            font-size: 1.5rem;
-            font-family: "Libre Braskerville", geogia;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.09em;
-          }
-
-          .card-preview__subtitle {
-            margin-top: 0.2rem;
-            font-size: 1rem;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: 400;
-            letter-spacing: 0.2em;
-          }
-
-          .card-preview__contact {
-            margin-top: 0.6rem;
+          &-element {
+            list-style: none;
             display: flex;
-            flex-direction: column;
-            margin-left: 1.8rem;
+            align-items: center;
             gap: 0.5rem;
-            letter-spacing: 0.15em;
-
-            &-element {
-              list-style: none;
-              display: flex;
-              align-items: center;
-              gap: 0.5rem;
-            }
-
-            &-icon {
-              font-size: 0.8rem;
-              background-color: white;
-              color: black;
-              border-radius: 50%;
-              width: 20px;
-              height: 20px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
           }
-        }
-      }
-      .card-preview--cute {
-        background-image: url(/images/Cute.png);
 
-        &__left {
-          flex: 3;
-          display: flex;
-          flex-direction: column;
-
-          .card-preview__image {
-            flex: 2;
-            background-image: url(/images/logo-nimalog-card.png);
-            background-size: contain;
-            background-repeat: no-repeat;
-            background-position: center;
-            width: 80%;
-            height: 80%;
-            margin: 0 auto;
-          }
-          .card-preview__slogan {
-            flex: 1;
+          &-icon {
+            font-size: 0.8rem;
+            background-color: #ededed;
             color: black;
-            margin-left: 4vw;
-            text-transform: uppercase;
-          }
-        }
-
-        &__right {
-          flex: 5;
-          margin-top: clamp(1.5rem, 5vw, 3rem);
-          color: #ededed;
-
-          .card-preview__title {
-            text-align: center;
-            text-align: center;
-            font-size: 1.5rem;
-            font-family: "Libre Braskerville", geogia;
-            font-weight: 400;
-            text-transform: uppercase;
-            letter-spacing: 0.09em;
-          }
-
-          .card-preview__subtitle {
-            margin-top: 0.2rem;
-            font-size: 1rem;
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: 400;
-            letter-spacing: 0.2em;
-          }
-
-          .card-preview__contact {
-            margin-top: 0.6rem;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
             display: flex;
-            flex-direction: column;
-            margin-left: 1.8rem;
-            gap: 0.5rem;
-            letter-spacing: 0.15em;
-
-            &-element {
-              list-style: none;
-              display: flex;
-              align-items: center;
-              gap: 0.5rem;
-            }
-
-            &-icon {
-              font-size: 0.8rem;
-              background-color: white;
-              color: black;
-              border-radius: 50%;
-              width: 20px;
-              height: 20px;
-              display: flex;
-              align-items: center;
-              justify-content: center;
-            }
+            align-items: center;
+            justify-content: center;
           }
         }
       }
     }
 
-    .button-reset {
-      background-color: antiquewhite;
+    .card-preview--classic {
+      //no puedo rellenar esta clase
     }
-  
+
+    .card-preview--classic-reverse {
+      background-image: url(/images/Classic-reverse.png);
+
+      .card-preview__image {
+        background-image: url(/images/logo-nimalog-reverse-recortado.png);
+      }
+      .card-preview__slogan {
+        color: #ededed;
+      }
+      .card-preview__title {
+        color: #000000;
+      }
+      .card-preview__subtitle {
+        color: black;
+      }
+
+      .card-preview__contact {
+        gap: 0.4rem;
+      }
+
+      .card-preview__contact-element {
+        color: black;
+      }
+
+      .card-preview__contact-icon {
+        background-color: black;
+        color: #ededed;
+        width: 23px;
+        height: 23px;
+      }
+    }
+
+    .card-preview--business {
+      background-image: url(/images/Business.png);
+      .card-preview__title {
+        color: #d9d9d9;
+      }
+      .card-preview__subtitle {
+        color: #d9d9d9;
+      }
+
+      .card-preview__contact {
+        gap: 0.5rem;
+      }
+
+      .card-preview__contact-element {
+        color: #d9d9d9;
+      }
+
+      .card-preview__contact-icon {
+        background-color: #d9d9d9;
+        color: black;
+        width: 20px;
+        height: 20px;
+      }
+    }
+
+    .card-preview--retro {
+      background-image: url(/images/Retro.png);
+      .card-preview__title {
+        color: black;
+      }
+      .card-preview__subtitle {
+        color: black;
+      }
+
+      .card-preview__contact {
+        gap: 0.5rem;
+      }
+
+      .card-preview__contact-element {
+        color: black;
+      }
+
+      .card-preview__contact-icon {
+        background-color: #ededed;
+        color: black;
+        width: 20px;
+        height: 20px;
+      }
+    }
+    .card-preview--delicate {
+      background-image: url(/images/Delicate.png);
+
+      .card-preview__title {
+        color: black;
+      }
+      .card-preview__subtitle {
+        color: black;
+      }
+
+      .card-preview__contact-element {
+        color: black;
+      }
+
+      .card-preview__contact-icon {
+        background-color: #f0778c;
+      }
+    }
+    .card-preview--cute {
+      background-image: url(/images/Cute.png);
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      .card-preview__title {
+        color: black;
+      }
+      .card-preview__subtitle {
+        color: black;
+      }
+
+      .card-preview__contact-element {
+        color: black;
+      }
+
+      .card-preview__contact-icon {
+        background-color: #65462f;
+        color: antiquewhite;
+        width: 21px;
+        height: 21px;
+      }
+    }
+  }
+
+  .button-reset {
+    background-color: #000000;
+    color: #ededed;
+    max-width: 32rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-bottom-left-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+  .form__contact {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .name-input {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .work-input {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .img-background {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+    .phone-input {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .phone-input {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .email-input {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .rrss-input {
+      gap: 1rem;
+    }
+  }
+
+  .form__contact input {
+    background-color: rgb(153, 151, 151);
+  }
 }
