@@ -1,70 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../scss/avatar.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../scss/avatar.css" />
     <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      href="https://fonts.googleapis.com/css?family=Montserrat:100,300,300italic,400,400italic,500,600&display=swap|DM+Serif+Display|Libre+Baskerville:400,400italic|Roboto&display=swap"
+      rel="stylesheet"
     />
-    <link rel="stylesheet" href="./scss/layout/_card.scss">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./scss/layout/_card.scss" />
     <title>Tu tarjeta</title>
-</head>
-<body>
+  </head>
+  <body>
+    <div class="page">
+      <load src="./partials/header.html" title="Bienvenidos a Adalab" />
+      <main class="card-form-main">
+        <section class="preview">
+          <div class="card-preview card-preview--classic">
+            <div class="card-preview__left">
+              <div class="js__profile-image card-preview__image"></div>
 
-<section class="preview">
-  <div class="card-preview card-preview--classic">
-    <div class="card-preview__left">
+              <div class="card-preview__slogan">
+                "Confíanos tu presentación"
+              </div>
+            </div>
 
-      <div class="js__profile-image card-preview__image"></div>
+            <div class="card-preview__right">
+              <h3 class="card-preview__title js-name"></h3>
+              <h4 class="card-preview__subtitle js-work"></h4>
 
-      <div class="card-preview__slogan">
-        "Confíanos tu presentación"
-      </div>
+              <ul class="card-preview__contact">
+                <li class="card-preview__contact-element">
+                  <span class="card-preview__contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </span>
+                  <span class="js-phone"></span>
+                </li>
 
+                <li class="card-preview__contact-element">
+                  <span class="card-preview__contact-icon">
+                    <i class="fa-solid fa-envelope-open"></i>
+                  </span>
+                  <span class="js-email"></span>
+                </li>
+
+                <li class="card-preview__contact-element">
+                  <span class="card-preview__contact-icon">
+                    <i class="fa-solid fa-globe"></i>
+                  </span>
+                  <span class="js-web"></span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section class="share">
+          <h3 class="share__title">Comparte</h3>
+          <button type="button" class="twitter share__icon" >Twitter<i class="fa-brands fa-twitter"></i></button>
+          <button type="button" class="linkedin share__icon">LinkedIn<i class="fa-brands fa-linkedin"></i></button>
+          <button type="button" class="whatsapp share__icon">WhatsApp<i class="fa-brands fa-whatsapp"></i></button>
+        </section>
+
+        <a href="card-form.html" class="button-back">Volver <i class="fa-solid fa-circle-arrow-left"></i></a>
+
+        <section class="contain-home">
+          <a class="home" href="index-main.html"
+            ><i class="fa-solid fa-house"></i
+          ></a>
+        </section>
+      </main>
+      <load src="./partials/footer.html" />
     </div>
-
-    <div class="card-preview__right">
-      <h3 class="card-preview__title js-name"></h3>
-      <h4 class="card-preview__subtitle js-work"></h4>
-
-      <ul class="card-preview__contact">
-        <li class="card-preview__contact-element">
-          <span class="card-preview__contact-icon">
-            <i class="fa-solid fa-phone"></i>
-          </span>
-          <span class="js-phone"></span>
-        </li>
-
-        <li class="card-preview__contact-element">
-          <span class="card-preview__contact-icon">
-            <i class="fa-solid fa-envelope-open"></i>
-          </span>
-          <span class="js-email"></span>
-        </li>
-
-        <li class="card-preview__contact-element">
-          <span class="card-preview__contact-icon">
-            <i class="fa-solid fa-globe"></i>
-          </span>
-          <span class="js-web"></span>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-
-<section class="share">
-    <h3>Compartir en:</h3>
-<button type="button" class="twitter">Twitter</button>
-<button type="button" class="linkedin">LinkedIn</button>
-<button type="button" class="whatsapp">WhatsApp</button>
-</section>
-
-
-
-<script src="../js/card.js"></script>
-</body>
+    <script src="../js/card.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
