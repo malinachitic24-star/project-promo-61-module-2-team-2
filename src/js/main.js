@@ -170,6 +170,7 @@ paletteInputs.forEach((input) => {
 //   }
 // }
 
+//
 //1.c) Reset 
 const resetButton = document.querySelector('.button-reset');
 
@@ -178,10 +179,10 @@ resetButton.addEventListener('click', () => {
   location.reload();
 }); 
 
-
 //SUBMIT FORMULARIO
 cardForm.addEventListener('submit', function (ev) {
   ev.preventDefault();
+  console.log('submit ok');
 
   //Fetch
   fetch('https://dev.adalab.es/api/info/data', {

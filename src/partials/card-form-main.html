@@ -1,13 +1,20 @@
 <main class="card-form-main">
   <nav class="menu">
-
     <!-- DISEÑA -->
-    <button class="menu__button-design">Diseña<i class="fa-solid fa-paintbrush"></i></button>
+    <button class="menu__button-design">
+      Diseña<i class="fa-solid fa-paintbrush"></i>
+    </button>
     <div class="menu__dropdown-design">
       <form class="design">
         <fieldset class="design__palette">
           <label class="palette">
-            <input class="js-palette" type="radio" name="palette" value="classic" checked/>
+            <input
+              class="js-palette"
+              type="radio"
+              name="palette"
+              value="classic"
+              checked
+            />
             Classic
             <div class="palette__colors palette__colors--classic">
               <span class="palette__color palette__color--one"></span>
@@ -17,7 +24,12 @@
             </div>
           </label>
           <label class="palette">
-            <input class="js-palette" type="radio" name="palette" value="classic-reverse"/>
+            <input
+              class="js-palette"
+              type="radio"
+              name="palette"
+              value="classic-reverse"
+            />
             Classic-reverse
             <div class="palette__colors palette__colors--classic-reverse">
               <span class="palette__color palette__color--one"></span>
@@ -27,7 +39,12 @@
             </div>
           </label>
           <label class="palette">
-            <input class="js-palette" type="radio" name="palette" value="business"/>
+            <input
+              class="js-palette"
+              type="radio"
+              name="palette"
+              value="business"
+            />
             Business
             <div class="palette__colors palette__colors--business">
               <span class="palette__color palette__color--one"></span>
@@ -37,7 +54,12 @@
             </div>
           </label>
           <label class="palette">
-            <input class="js-palette" type="radio" name="palette" value="retro"/>
+            <input
+              class="js-palette"
+              type="radio"
+              name="palette"
+              value="retro"
+            />
             Retro
             <div class="palette__colors palette__colors--retro">
               <span class="palette__color palette__color--one"></span>
@@ -47,7 +69,12 @@
             </div>
           </label>
           <label class="palette">
-            <input class="js-palette" type="radio" name="palette" value="delicate"/>
+            <input
+              class="js-palette"
+              type="radio"
+              name="palette"
+              value="delicate"
+            />
             Delicate
             <div class="palette__colors palette__colors--delicate">
               <span class="palette__color palette__color--one"></span>
@@ -57,7 +84,12 @@
             </div>
           </label>
           <label class="palette">
-            <input class="js-palette" type="radio" name="palette" value="cute"/>
+            <input
+              class="js-palette"
+              type="radio"
+              name="palette"
+              value="cute"
+            />
             Cute
             <div class="palette__colors palette__colors--cute">
               <span class="palette__color palette__color--one"></span>
@@ -70,62 +102,106 @@
       </form>
     </div>
 
-
     <!-- RELLENA -->
-    <button class="menu__button-form">Rellena<i class="fa-solid fa-keyboard"></i></button>
+    <button class="menu__button-form">
+      Rellena<i class="fa-solid fa-keyboard"></i>
+    </button>
     <div class="menu__dropdown-form">
-       <form class="complete">
-            <div class="name-input">
-                <label for="name">Nombre:</label><br>
-                <input type="text" id="name" class="companyname" data-parrafo="card-preview__title js-name" name="name" placeholder="Nombre de la empresa..." required>
-            </div>
+      <form class="complete">
+        <div class="name-input">
+          <label for="name">Nombre:</label><br />
+          <input
+            type="text"
+            id="name"
+            class="companyname"
+            data-parrafo="card-preview__title js-name"
+            name="name"
+            placeholder="Nombre de la empresa..."
+            required
+          />
+        </div>
 
-            <div class="work-input">
-                <label for="work">Cargo:</label><br>
-                <input type="text" id="work" class="work-company" data-parrafo="card-preview__subtitle ja-business-sector" name="work" placeholder="Cargo...">
-            </div>
+        <div class="work-input">
+          <label for="work">Cargo:</label><br />
+          <input
+            type="text"
+            id="work"
+            class="work-company"
+            data-parrafo="card-preview__subtitle ja-business-sector"
+            name="work"
+            placeholder="Cargo..."
+          />
+        </div>
 
-            <!-- <div class="img-background">
+        <!-- <div class="img-background">
               <label for="imagen">Selecciona tu imagen:</label><br>
               <input type="image" class="imag-background" data-parrafo="card-preview__image js-image" name="imagen">
               <span class="img-profile"></span>
             </div> -->
 
-            <div class="img-background">
-            <label for="profileUpload" class="profile-label">Selecciona tu imagen</label>
-            <input type="file" id="profileUpload" class="js__profile-upload-btn">
+        <div class="img-background">
+          <label for="profileUpload" class="profile-label"
+            >Selecciona tu imagen:</label
+          >
+          <input
+            type="file"
+            id="profileUpload"
+            class="js__profile-upload-btn"
+          />
 
-            <!-- Vista previa pequeña -->
-            <div class="js__profile-preview img-profile"></div>
-            </div>
+          <!-- Vista previa pequeña -->
+          <div class="js__profile-preview img-profile"></div>
+        </div>
 
-            <div class="phone-input">
-                <label for="phone">Teléfono:</label><br>
-                <input type="number" id="phone" class="phone-company" data-parrafo="js-phone" name="phone" placeholder="Teléfono la empresa..." required>
-            </div>
+        <div class="phone-input">
+          <label for="phone">Teléfono:</label><br />
+          <input
+            type="number"
+            id="phone"
+            class="phone-company"
+            data-parrafo="js-phone"
+            name="phone"
+            placeholder="Teléfono la empresa..."
+            required
+          />
+        </div>
 
-            <div class="email-input">
-                <label for="email">Email:</label><br>
-                <input type="text" id="email" class="email-company" data-parrafo="js-email" name="email" placeholder="Email de la empresa.." required>
-            </div>
+        <div class="email-input">
+          <label for="email">Email:</label><br />
+          <input
+            type="text"
+            id="email"
+            class="email-company"
+            data-parrafo="js-email"
+            name="email"
+            placeholder="Email de la empresa.."
+            required
+          />
+        </div>
 
-            <div class="rrss-input">
-                <label for="rrss">Redes Sociales:</label><br>
-                <input type="text" id="rrss" class="web-company" data-parrafo="js-web" name="rrss" placeholder="Redes sociales...">
-            </div>
+        <div class="rrss-input">
+          <label for="rrss">Web:</label>
+          <input
+            type="text"
+            id="rrss"
+            class="web-company"
+            data-parrafo="js-web"
+            name="rrss"
+            placeholder="Redes sociales..."
+          />
+        </div>
 
-            <button type="submit" class="menu__button-share">Generar tarjeta<i class="fa-solid fa-share-nodes"></i></button>
-        </form>
-    </div><br>
+        <button type="submit" class="menu__button-share">
+          Generar tarjeta<i class="fa-solid fa-share-nodes"></i>
+        </button>
+      </form>
+    </div>
   </nav>
-
 
   <section class="preview">
     <div class="card-preview card-preview--classic">
       <div class="card-preview__left">
-
-        <div class="js__profile-image card-preview__image js-image">
-        </div>
+        <div class="js__profile-image card-preview__image js-image"></div>
 
         <div class="card-preview__slogan js-slogan">
           "Confíanos tu presentación"
