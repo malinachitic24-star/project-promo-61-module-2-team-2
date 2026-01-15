@@ -10,9 +10,8 @@ const webApi = document.querySelector('.js-web');
 
 //Botones compartir
 const shareTw = document.querySelector('.twitter');
-const shareTel = document.querySelector('.telegram');
+const shareLIn = document.querySelector('.linkedin');
 const shareWA = document.querySelector('.whatsapp');
-const shareBlue = document.querySelector('.bluesky');
 
 
 //OBTENER UUID DE URL
@@ -67,24 +66,18 @@ const id = urlParams.get('id');
         window.open(twitterURL, '_blank');
       })
 
+      //LinkedIn
+      shareLIn.addEventListener('click', function() {
+        const linkedinURL = `https://www.linkedin.com/shareArticle?url=${cardURL}`;
+        window.open(linkedinURL, '_blank');
+      })
+
       //WhatsApp
       shareWA.addEventListener('click', function() {
         const whatsappURL = `https://wa.me/?text=${shareText}%20${cardURL}`;
         window.open(whatsappURL, '_blank');
       })
-
-      //Telegram
-      shareTel.addEventListener('click', function() {
-        const telegramURL = `https://t.me/share/url?text=${shareText}&url=${cardURL}`;;
-        window.open(telegramURL, '_blank');
-      })
-
-      //BlueSky
-      shareBlue.addEventListener('click', function() {
-        const blueURL = `https://bsky.app/intent/compose?text=${shareText}%20${cardURL}`;
-        window.open(blueURL, '_blank');
-      })
-
     }
+
 
 
