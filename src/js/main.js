@@ -51,20 +51,16 @@ function saveInStorage() {
 
 //Cargar desde localStorage
 function loadFromStorage() {
-  const storedData = localStorage.getItem('cardData');
-  if (!storedData) {
-    return;
-  }
+  const storedData = JSON.parse(localStorage.getItem('cardData') || {});
 
-  //Coger los datos de localStorage y los pasa a cardData
-  const parsedData = JSON.parse(storedData);
-  cardData.name = parsedData.name || '';
-  cardData.work = parsedData.work || '';
-  cardData.phone = parsedData.phone || '';
-  cardData.email = parsedData.email || '';
-  cardData.rrss = parsedData.rrss || '';
-  cardData.palette = parsedData.palette || '';
-  cardData.photo = parsedData.photo || '';
+  //Reconstruir cardData con lo que había en localStorage
+  cardData.name = storedData.name || '';
+  cardData.work = storedData.work || '';
+  cardData.phone = storedData.phone || '';
+  cardData.email = storedData.email || '';
+  cardData.rrss = storedData.rrss || '';
+  cardData.palette = storedData.palette || '';
+  cardData.photo = storedData.photo || '';
 
   //Autorrellenar formulario
   companyName.value = cardData.name;
@@ -88,6 +84,18 @@ function loadFromStorage() {
     profileImage.style.backgroundImage = `url(${cardData.photo})`;
     profilePreview.style.backgroundImage = `url(${cardData.photo})`;
   }
+
+  //Autorrellenar paleta
+  if (cardData.palette) {
+  applyPalette(cardData.palette);
+
+  //Autorrellenar radio
+  const radioToCheck = document.querySelector(`.js-palette[value="${cardData.palette}"]`);
+
+  if (radioToCheck) {
+    radioToCheck.checked = true;
+  }
+}
 }
 
 
