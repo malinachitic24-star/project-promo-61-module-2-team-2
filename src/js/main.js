@@ -88,6 +88,18 @@ function loadFromStorage() {
     profileImage.style.backgroundImage = `url(${cardData.photo})`;
     profilePreview.style.backgroundImage = `url(${cardData.photo})`;
   }
+
+  //Autorrellenar paleta
+  if (cardData.palette) {
+  applyPalette(cardData.palette);
+
+  //Autorrellenar radio
+  const radioToCheck = document.querySelector(`.js-palette[value="${cardData.palette}"]`);
+
+  if (radioToCheck) {
+    radioToCheck.checked = true;
+  }
+}
 }
 
 
