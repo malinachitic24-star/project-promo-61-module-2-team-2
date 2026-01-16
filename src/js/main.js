@@ -51,7 +51,7 @@ function saveInStorage() {
 
 //Cargar desde localStorage
 function loadFromStorage() {
-  const storedData = JSON.parse(localStorage.getItem('cardData') || {});
+  const storedData = JSON.parse(localStorage.getItem('cardData') || '{}');
 
   //Reconstruir cardData con lo que había en localStorage
   cardData.name = storedData.name || '';
@@ -190,7 +190,7 @@ resetButton.addEventListener('click', () => {
 //SUBMIT FORMULARIO
 cardForm.addEventListener('submit', function (ev) {
   ev.preventDefault();
-  console.log('submit ok');
+  console.log('submit ok');//comprobar
 
   //Fetch
   fetch('https://dev.adalab.es/api/info/data', {
