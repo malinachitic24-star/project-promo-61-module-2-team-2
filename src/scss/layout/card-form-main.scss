@@ -1,15 +1,14 @@
 @use "../core/variables" as vars;
 .card-form-main {
-  margin-left: 1rem;
-  margin-right: 1rem;
+  margin-left: 5%;
+  margin-right: 5%;
   display: flex;
   flex-direction: column;
   .contain-card {
-
     .menu {
       display: flex;
       flex-direction: column;
-      max-width: 55rem;
+      max-width: 69rem;
 
       &__button-design {
         margin-top: 0.5rem;
@@ -79,7 +78,6 @@
 
       &__dropdown-design {
         display: none;
-
       }
 
       &__dropdown-design.open {
@@ -254,7 +252,7 @@
           .card-preview__title {
             text-align: center;
             text-align: center;
-            font-size: clamp(1.5rem, 5vw, 5rem);
+            font-size: clamp(1.8rem, 7vw, 5rem);
             font-family: "Libre Braskerville", georgia;
             font-weight: 400;
             text-transform: uppercase;
@@ -263,7 +261,7 @@
 
           .card-preview__subtitle {
             margin-top: 0.2rem;
-            font-size: clamp(1rem, 5vw, 3.2rem);
+            font-size: clamp(1.2rem, 5vw, 3.2rem);
             text-align: center;
             text-transform: uppercase;
             font-weight: 400;
@@ -365,7 +363,6 @@
         .card-preview__contact-icon {
           background-color: #ededed;
           color: black;
-
         }
       }
       .card-preview--delicate {
@@ -491,7 +488,6 @@
   min-width: 150px;
   max-width: 300px;
   font-size: clamp(1rem, 5vw, 1.5rem);
-
 }
 
 .contain-home {
@@ -544,24 +540,344 @@
   }
 }
 
+@media (min-width: 375px) and (max-width: 900px) {
+  .card-form-main {
+    .contain-card {
+      .main {
+        min-width: 25rem;
+      }
+      .preview {
+        .card-preview {
+          &__right {
+            .card-preview__title {
+              font-size: clamp(2.2rem, 9vw, 7rem);
+            }
+            .card-preview__subtitle {
+              margin-top: 0.2rem;
+              font-size: clamp(1.5rem, 6vw, 3.2rem);
+
+            }
+
+            .card-preview__contact {
+              margin-top: clamp(0.4rem, 1vw, 0.9rem);
+
+              margin-left: clamp(1.8rem, 6vw, 5rem);
+              gap: clamp(0.4rem, 3vw, 2rem);
+
+
+              &-icon {
+                font-size: clamp(1rem, 4vw, 5rem);
+                background-color: #ededed;
+                color: black;
+                border-radius: 50%;
+                width: clamp(28px, 7vw, 65px);
+                height: clamp(28px, 7vw, 65px);
+
+                i {
+                  transform: translateX(1px);
+                }
+              }
+            }
+          }
+        }
+
+        .card-preview--classic-reverse {
+          background-image: url(/images/Classic-reverse.png);
+
+          .card-preview__image {
+            background-image: url(/images/logo-nimalog-reverse-recortado.png);
+          }
+          .card-preview__slogan {
+            color: #ededed;
+          }
+          .card-preview__title {
+            color: #000000;
+          }
+          .card-preview__subtitle {
+            color: black;
+          }
+
+          .card-preview__contact-element {
+            color: black;
+          }
+
+          .card-preview__contact-icon {
+            background-color: black;
+            color: #ededed;
+          }
+        }
+
+        .card-preview--business {
+          background-image: url(/images/Business.png);
+          .card-preview__title {
+            color: #d9d9d9;
+          }
+          .card-preview__subtitle {
+            color: #d9d9d9;
+          }
+
+          .card-preview__contact-element {
+            color: #d9d9d9;
+          }
+
+          .card-preview__contact-icon {
+            background-color: #d9d9d9;
+            color: black;
+          }
+        }
+
+        .card-preview--retro {
+          background-image: url(/images/Retro.png);
+          .card-preview__title {
+            color: black;
+          }
+          .card-preview__subtitle {
+            color: black;
+          }
+
+          .card-preview__contact-element {
+            color: black;
+          }
+
+          .card-preview__contact-icon {
+            background-color: #ededed;
+            color: black;
+          }
+        }
+        .card-preview--delicate {
+          background-image: url(/images/Delicate.png);
+
+          .card-preview__title {
+            color: black;
+          }
+          .card-preview__subtitle {
+            color: black;
+          }
+
+          .card-preview__contact-element {
+            color: black;
+          }
+
+          .card-preview__contact-icon {
+            background-color: #f0778c;
+          }
+        }
+        .card-preview--cute {
+          background-image: url(/images/Cute.png);
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+
+          .card-preview__title {
+            color: black;
+          }
+          .card-preview__subtitle {
+            color: black;
+          }
+
+          .card-preview__contact-element {
+            color: black;
+          }
+
+          .card-preview__contact-icon {
+            background-color: #65462f;
+            color: antiquewhite;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 900px) and (max-width: 1280px) {
+  .card-form-main {
+    .contain-card {
+      .main {
+        min-width: 25rem;
+      }
+      .preview {
+        .card-preview {
+          &__right {
+            .card-preview__title {
+              font-size: clamp(2.2rem, 7vw, 5.7rem);
+            }
+            .card-preview__subtitle {
+              margin-top: 0.2rem;
+              font-size: clamp(1.5rem, 6vw, 4rem);
+
+            }
+
+            .card-preview__contact {
+              margin-top: clamp(0.4rem, 1vw, 0.9rem);
+
+              margin-left: clamp(1.8rem, 6vw, 5rem);
+              gap: clamp(0.4rem, 3vw, 2rem);
+
+
+              &-icon {
+                font-size: clamp(1rem, 3.6vw, 4rem);
+                background-color: #ededed;
+                color: black;
+                border-radius: 50%;
+                width: clamp(28px, 7vw, 65px);
+                height: clamp(28px, 7vw, 65px);
+
+                i {
+                  transform: translateX(1px);
+                }
+              }
+            }
+          }
+        }
+
+        .card-preview--classic-reverse {
+          background-image: url(/images/Classic-reverse.png);
+
+          .card-preview__image {
+            background-image: url(/images/logo-nimalog-reverse-recortado.png);
+          }
+          .card-preview__slogan {
+            color: #ededed;
+          }
+          .card-preview__title {
+            color: #000000;
+          }
+          .card-preview__subtitle {
+            color: black;
+          }
+
+          .card-preview__contact-element {
+            color: black;
+          }
+
+          .card-preview__contact-icon {
+            background-color: black;
+            color: #ededed;
+          }
+        }
+
+        .card-preview--business {
+          background-image: url(/images/Business.png);
+          .card-preview__title {
+            color: #d9d9d9;
+          }
+          .card-preview__subtitle {
+            color: #d9d9d9;
+          }
+
+          .card-preview__contact-element {
+            color: #d9d9d9;
+          }
+
+          .card-preview__contact-icon {
+            background-color: #d9d9d9;
+            color: black;
+          }
+        }
+
+        .card-preview--retro {
+          background-image: url(/images/Retro.png);
+          .card-preview__title {
+            color: black;
+          }
+          .card-preview__subtitle {
+            color: black;
+          }
+
+          .card-preview__contact-element {
+            color: black;
+          }
+
+          .card-preview__contact-icon {
+            background-color: #ededed;
+            color: black;
+          }
+        }
+        .card-preview--delicate {
+          background-image: url(/images/Delicate.png);
+
+          .card-preview__title {
+            color: black;
+          }
+          .card-preview__subtitle {
+            color: black;
+          }
+
+          .card-preview__contact-element {
+            color: black;
+          }
+
+          .card-preview__contact-icon {
+            background-color: #f0778c;
+          }
+        }
+        .card-preview--cute {
+          background-image: url(/images/Cute.png);
+          border-bottom-left-radius: 15px;
+          border-bottom-right-radius: 15px;
+          border-top-left-radius: 15px;
+          border-top-right-radius: 15px;
+
+          .card-preview__title {
+            color: black;
+          }
+          .card-preview__subtitle {
+            color: black;
+          }
+
+          .card-preview__contact-element {
+            color: black;
+          }
+
+          .card-preview__contact-icon {
+            background-color: #65462f;
+            color: antiquewhite;
+          }
+        }
+      }
+    }
+  }
+}
+
 @media all and (min-width: 1280px) {
   .card-form-main {
     .contain-card {
       display: flex;
       flex-direction: row;
-      gap: 3rem;
-      margin-left: 2rem;
+      gap: 1rem;
+      margin-left: 1rem;
       margin-bottom: 6rem;
-
+      justify-content: center;
+      align-items: center;
       .menu {
-        &__button-design {
-          min-width: 28rem;
-          
-        }
+        min-width: 25rem;
       }
+         .preview .card-preview__contact-icon {
+          i {
+            transform: translateX(2.5px);
+          }
+        }
     }
-
   }
-  
-  
+}
+
+@media all and (min-width: 1500px) {
+  .card-form-main {
+    .contain-card {
+      gap: 5rem;
+      margin-left: 5rem;
+      margin-bottom: 6rem;
+      justify-content: center;
+      align-items: center;
+      .menu {
+        max-width: 29rem;
+        min-width: 25rem;
+      }
+         .preview .card-preview__contact-icon {
+          i {
+            transform: translateX(2.5px);
+          }
+        }
+    }
+  }
 }
